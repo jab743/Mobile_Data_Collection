@@ -38,3 +38,5 @@ STATIC_PATHS = ['images', 'docs']
 THEME = 'theme'
 
 RELATIVE_URLS=True
+
+BOOTSTRAP_THEME = 'sandstone'
