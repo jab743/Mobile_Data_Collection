@@ -15,7 +15,7 @@
         <hr>
         <div id="archives">
             {% for article in dates %}
-                    <a href="{{ SITEURL }}/{{ article.url }}" class="lead">{{ article.date | strftime('%B %d, %Y') }} - {{ article.title }}</a>
+                    <a href="{{ SITEURL }}/{{ article.url }}">{{ article.date | strftime('%B %d, %Y') }} - {{ article.title }}</a>
             {% endfor %}
         </div>
     </section>
