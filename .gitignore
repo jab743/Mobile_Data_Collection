@@ -1,5 +1,5 @@
 # pelican output folder
-output/
+output/*
 
 *.pid
 # Created by .ignore support plugin (hsz.mobi)
