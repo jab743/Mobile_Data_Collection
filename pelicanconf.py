@@ -19,7 +19,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-HIDE_SIDEBAR = True
+HIDE_SIDEBAR = False
 
 # Blogroll
 LINKS = (('Dr. Kyle Winfree', ''),)
