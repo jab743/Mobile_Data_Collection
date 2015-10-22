@@ -1,0 +1,23 @@
+#include <SoftwareSerial.h>
+#include <SD.h>
+#include <SPI.h>
+
+SoftwareSerial OpenLog(0, 1); //openlog output using standard RX and TX pins
+SoftwareSerial mySerial(2, 3); //bluetooth serialoutput using analog pins 2 (as RX) and 3 (as TX)
+
+int fsrAnalogPin = 0; // the analog pin that the force resistor will be connected to
+
+void setup() {
+  Serial.begin(57600); //Start a normal serial output (wired) at a buad rate of 57600
+  OpenLog.begin(9600); //Start the serial output using our defined input and output at a baud of 9600.
+  //It appears open log might only be able to write data at 9600 which may not be fast enough
+  mySerial.begin(115200); //Start the serial for the bluetooth at a baud rate of 115200
+  delay(1000); //wait a second for OpenLog to init
+}
+
+void loop() {
+  int fsrReading = analogRead(0); //take in an analog reading on pin 0 which is the force resistor
+  mySerial.println(fsrReading); //Print that output to the bluetooth output
+  OpenLog.println(fsrReading); //Print that output to openlog
+  delay(1000); //wait a second
+}
