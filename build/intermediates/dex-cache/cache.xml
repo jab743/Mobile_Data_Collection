@@ -1,3 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\ahmad\Documents\GitHub\Mobile_Data_Collection\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="C:\Users\ahmad\Documents\GitHub\Mobile_Data_Collection\app\build\intermediates\pre-dexed\debug\com.android.support-design-22.2.0_5fde90bd12d8c059e7a4b97e3fa1894a88be9c5f.jar" />
+    </item>
+    <item
+        jar="C:\Users\ahmad\Documents\GitHub\Mobile_Data_Collection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\ahmad\Documents\GitHub\Mobile_Data_Collection\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0_a86cb74e85c3939f29e86fc93dbe779cc7a2ed59.jar" />
+    </item>
+    <item
+        jar="C:\Users\ahmad\Documents\GitHub\Mobile_Data_Collection\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\ahmad\Documents\GitHub\Mobile_Data_Collection\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.0_daa162bd02475c314fb10b9ddec1fdbd93566a88.jar" />
+    </item>
+    <item
+        jar="C:\Users\ahmad\Documents\GitHub\Mobile_Data_Collection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\ahmad\Documents\GitHub\Mobile_Data_Collection\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.0_00034575b0b6be0eef13ed8e2ddcba0e7f41bc13.jar" />
+    </item>
+    <item
+        jar="C:\Users\ahmad\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\ahmad\Documents\GitHub\Mobile_Data_Collection\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0_61b3980de2c9c7b2e6be6a128128bed919557f1c.jar" />
+    </item>
+
+</items>
