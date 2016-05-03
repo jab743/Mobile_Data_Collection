@@ -21,8 +21,6 @@
     <link href="../theme/css/pygments/native.css" rel="stylesheet">
     <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
 
-        <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Mobile Data Collection ATOM Feed"/>
 
 
 
@@ -74,12 +72,47 @@ Mobile Data Collection            </a>
         <h1 class="entry-title hidden">Design</h1>
         
         <div class="entry-content">
-            <h3>Design</h3>
-<p>In progress...</p>
+            <h3>High Level Design</h3>
+<p>The high level design of this project is very simple. In large, its broken into three parts, the wearable device, the intermediate device(the mobile device) and the webserver. Each patient is given two wearable device, one for each foot.
+These devices are a series of force sensative resistors, and a triple axis accelerometer connected to a single microcontroller. This wearable device records various pieces of data from around the foot when the patient moves. It records things such as different
+pressure points, speed, and stride. As the information comes in, it is stored locally on a SD card. On a regular interval, the wearable device will transmit that stored data, via BlueTooth to the intermediate device.</p>
+<p>As the intermediate device recieves data, it stores that data locally. When the device has a WiFi connection, it will begin to offload that data to a webserver. The webserver than stores the data in a database to for ease of accesses. The webserver also will do some 
+basic analysis on that data, and can provide feedback to the user through any web browser. </p>
+<img src="./images/systemDesign.png" style="width:70%;height:70%">
 <h3>Tools</h3>
-<p>To be determined</p>
-<h3>Hardware</h3>
-<p>To be determined</p>
+<p>Languages: C, Java</p>
+<p>Database: PostgreSQL</p>
+<h3>Wearable Device Hardware</h3>
+<p><a href="https://www.pjrc.com/store/teensy32.html">Teensy 3.2 Microcontroller</a></p>
+<img src="./images/teensy32.jpg" style="width:40%;height:40%;">
+<br>
+<br>
+<p><a href="https://www.tekscan.com/products-solutions/force-sensors/a201">FlexiForce A201 Sensors</a></p>
+<img src="./images/tekscana201a.jpg" style="width:40%;height:40%;">
+<br>
+<br>
+<p><a href="https://www.sparkfun.com/products/341">Polymer Lithium Ion Battery - 850mAh</a></p>
+<img src="./images/LiPoBattery.jpg" style="width:30%;height:30%;">
+<br>
+<br>
+<p><a href="https://www.sparkfun.com/products/10217">LiPo Charger Basic - Micro-USB</a></p>
+<img src="./images/charger.jpg" style="width:30%;height:30%;">
+<br>
+<br>
+<p><a href="https://www.sparkfun.com/products/12756">Triple Axis Accelerometer Breakout</a></p>
+<img src="./images/gyroscope.jpg" style="width:30%;height:30%;">
+<br>
+<br>
+<p><a href="https://www.sparkfun.com/products/544">microSD Transflash Breakout</a></p>
+<img src="./images/sdCardReader.jpg" style="width:30%;height:30%;">
+<h3>Mobile Device Hardware</h3>
+<p><a href="http://www.amazon.com/BLU-Energy-Plus-Smartphone-Battery-/dp/B0129TQJJU/ref=sr_1_1?ie=UTF8&qid=1452473611&sr=8-1&keywords=energy+x+plus">BLU Energy X Plus Smartphone</a></p>
+<img src="./images/smartphone.jpg" style="width:50%;height:50%;">
+<br>
+<br>
+<p><a href="http://www.amazon.com/SanDisk-microSDHC-Standard-Packaging-SDSQUNC-032G-GN6MA/dp/B010Q57T02/ref=sr_1_1?ie=UTF8&qid=1452473485&sr=8-1&keywords=Sandisk+ultra+32+gb">SanDisk Ultra 32GB microSDHC UHS-I Card</a></p>
+<img src="./images/sdCard.jpg" style="width:30%;height:30%;">
+
         </div>
     </section>
         </div>
