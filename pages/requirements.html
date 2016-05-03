@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +22,6 @@
     <link href="../theme/css/pygments/native.css" rel="stylesheet">
     <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
 
-        <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Mobile Data Collection ATOM Feed"/>
 
 
 
@@ -75,9 +74,73 @@ Mobile Data Collection            </a>
         
         <div class="entry-content">
             <h3>Requirements</h3>
-<p>Lorem ipsum dolor sit amet, per in verterem scriptorem, pri ne modus salutandi disputando. Duo maiorum singulis in, patrioque gloriatur interesset his ei. Sumo graece equidem has at, cu vim principes democritum. Homero salutatus duo cu.</p>
-<p>Cu quas copiosae per. Qui eius consul maiestatis te, ex quo stet summo electram. Stet fastidii voluptatibus mel at, ut per doming aliquip repudiandae, vim ad nominavi honestatis. Sed ea sint menandri mnesarchum. Vis id dicant menandri, cu eos molestie adipiscing, ne sea fugit legimus. Mel rationibus adversarium at, sonet delicata molestiae et duo, solum erant accusamus cum ex.</p>
-<p>Ius in altera reformidans, has cu explicari adolescens definiebas. Sed an solum vitae urbanitas, quo mazim pericula ad. Nostrum signiferumque ea eam, illum utamur reprimique an usu. Definitionem concludaturque his id. Consequat adipiscing mel eu.</p>
+<h3><b>1</b> Functional Requirements</h3>
+	<h4><b>1.1</b>  Wearable Device</h4>
+		<p><b>1.1.1</b>  The Teensy microcontroller will be used to collect data.</p>
+		<p><b>1.1.2</b>  The microcontroller will be able to connect to force and six-axis motion sensors.</p>
+		<p><b>1.1.3</b> The microcontroller must be able to accept various types of force resistor sensors.</p>
+		<p><b>1.1.4</b> The microcontroller will be able to connect to additional sensors using the I2C bus and/or SPI.</p>
+		<p><b>1.1.5</b> The microcontroller will maintain an accurate timestamp to the millisecond that is synchronized with other nearby devices.</p>
+		<p><b>1.1.6</b> The microcontroller will upload data through a Bluetooth module .</p>
+		<p><b>1.1.7</b> The microcontroller should store historical data in a structured format on a SD card until uploaded.</p>
+		<p><b>1.1.8</b> The data should be structured so that the type of sensor does not matter for storage and upload.</p>
+		<p><b>1.1.9</b> The microcontroller must be able to run on a battery.</p>
+		<p><b>1.1.10</b> The microcontroller must be able to be recharged.</p>
+		<p><b>1.1.11</b> The microcontroller should be extensible with different pluggable sensors.</p>
+		<p><b>1.1.12</b> The microcontroller will have a power-down method that activates on a specified voltage.</p>
+		<p><b>1.1.13</b> The microcontroller should react to commands issued over Bluetooth including power-down, activate/deactivate sensors, status queries and data queries.</p>
+	<h4><b>1.2</b> Mobile Application</h4>
+		<p><b></b> The Android application will communicate with the microcrontroller using bluetooth.</p>
+		<p><b>1.2.1</b> The Android application will communicate with the server using JSON and HTTP.</p>
+		<p><b>1.2.2</b> The Android application should be able to connect to multiple devices.</p>
+		<p><b>1.2.3</b> The Android application must be able to pair with up to 20 devices containing sensors.</p>
+		<p><b>1.2.4</b> The Android application should be able to provide basic instructions to the subject.  These instructions should be dynamic and specified through the web application and database.</p> <p>The Android application should have a command to identify specific devices by blinking an led.</p>
+		<p><b>1.2.5</b> The Android application should be able to synchronize time with the devices.</p>
+		<p><b>1.2.6</b> The Android application should be able request data from the devices.</p>
+		<p><b>1.2.7</b> The Android application should be able to query the status of devices including battery life, sensor values and time.</p>
+		<p><b>1.2.8</b> The Android application should be able to activate sensors on the device.</p>
+		<p><b>1.2.9</b> The Android application should be able to deactivate sensors on the device.</p>
+	<h4><b>1.3</b> Web Server and Database</h4>
+		<p><b>1.3.1</b> The database will allow analysis by patient, device or date and time captured.</p>
+		<p><b>1.3.2</b> Data will be stored in its raw form indefinitely in the database.</p>
+		<p><b>1.3.3</b> Patients will be associated with a device in a database table using the web application.</p>
+		<p><b>1.3.4</b> Devices ids will be associated with specific sensor values.</p>
+		<p><b>1.3.5</b> The web server will accept data from the mobile application using JSON and HTTP.</p>
+		<p><b>1.3.6</b> The database and server will be run locally at NAU.</p>
+		<p><b>1.3.7</b> Data will be presented to project investigators through a web application.</p>
+		<p><b>1.3.8</b> The web user will be able to filter data across patient, device and timestamp.</p>
+		<p><b>1.3.9</b> Data will be visible to the web user through graphs and tables.</p>
+		<p><b>1.3.10</b> A basic web authentication system should be in place to protect the data.</p>
+		<p><b>1.3.11</b> The web application should be accessible on the most modern browsers.</p>
+		<p><b>1.3.12</b> The project investigators should be able to share data to others with links to the web application.</p>
+		<p><b>1.3.13</b> A subset of the data should be downloadable through the server in csv format.</p>
+		<p><b>1.3.14</b> The server must send error notices to administrator.</p>
+		<br>
+<h3><b>2</b> Environmental Requirements</h3>
+	<h4><b>2.1</b> Wearable Device</h4>
+		<p><b>2.1.1</b> The wearable devices must be able to operate on AVR or ARM architecture microcontrollers.</p>
+	<h4><b>2.2</b> Mobile Application</h4>
+		<p><b>2.2.1</b> Mobile device application must be able to operate on Android platform.</p>
+	<h4><b>2.3</b> Web Server and Database</h4>
+		<p><b>2.3.1</b> The web application and analysis tools must be able to work on any modern browser.</p>
+		<p><b>2.3.2</b> The database can be connected to by Matlab and/or Octave.</p>
+		<br>
+<h3><b>3</b> Non-functional Requirements</h3>
+	<h4><b>3.1</b> Wearable Device</h4>
+		<p><b>3.1.1</b> The wearable device must be able to capture data at a rate greater than 70hz.</p>
+		<p><b>3.1.2</b> The subject should have no interaction with the device other than putting it on.</p>
+		<p><b>3.1.3</b> The wearable device battery must be able to last at least 24 hours, ideally lasting 72 hours. </p>
+		<p><b>3.1.4</b> The wearable device needs be easily repairable.</p>
+		<p><b>3.1.5</b> The wearable device must not impede a person's natural gait.</p>
+		<p><b>3.1.6</b> The wearable device must be reusable and work on varying subjects.</p>
+		<p><b>3.1.7</b> The wearable device must be able to absorb various levels of shock.</p>
+		<p><b>3.1.8</b> The wearable device must be able to operate in a moist environment.</p>
+		<p><b>3.1.9</b> The wearable device must be able to operate in a dusty environment.</p>
+	<h4><b>3.2</b> Mobile Application</h4>
+		<p><b>3.2.1</b> Aside from initial setup, the subject should not need any interact with the mobile application in order to collect data. </p>
+	<h4><b>3.3</b> Web Server</h4>
+		<p><b>3.3.1</b> The server must be available 24 hours a day with 95\% reliability.</p>
+		<p><b>3.3.2</b> The server and database must be able to accept data from over 50 different subjects, each with many devices and sensors.</p>
         </div>
     </section>
         </div>
